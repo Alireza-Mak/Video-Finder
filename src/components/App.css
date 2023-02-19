@@ -1,0 +1,7 @@
+/** @format */
+
+@media only screen and (max-width: 576px) {
+  .container {
+    border: none !important;
+  }
+}
