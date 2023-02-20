@@ -7,7 +7,7 @@ import youtube from '../api/youtube';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
 class App extends React.Component {
-  state = { result: [], selectedVideo: null };
+  state = { result: [], selectedVideo: null, year: new Date().getFullYear() };
   componentDidMount() {
     this.onSearchSubmit('react.js');
   }
@@ -55,6 +55,23 @@ class App extends React.Component {
               />
             </div>
           </div>
+        </div>
+        <div className="footer m-0 text-center text-light">
+          &copy;{this.state.year}by{' '}
+          <a
+            className="text-danger text-decoration-none"
+            href="https://alirezamak.com"
+          >
+            Alireza Mak
+          </a>{' '}
+          | Front End Developer. Powered by{' '}
+          <a
+            className="text-danger text-decoration-none"
+            href="https://youtube.com"
+          >
+            Youtube.com
+          </a>
+          .
         </div>
       </div>
     );
